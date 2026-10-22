@@ -55,8 +55,8 @@ customer-churn-prediction/
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
-├── data/                    # Place Kaggle CSV here (not committed)
-├── notebooks/               # Optional exploratory notebook
+├── data/                    
+├── notebooks/               
 ├── src/
 │   └── train_model.py
 └── reports/
