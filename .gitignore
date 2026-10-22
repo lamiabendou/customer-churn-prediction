@@ -1,0 +1,9 @@
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+.env
+models/
+data/*.csv
+reports/*.png
+reports/*.json
+reports/validation_thresholds.csv
