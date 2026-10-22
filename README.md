@@ -8,8 +8,6 @@ Predict whether a telecommunications customer will cancel their subscription (*c
 ## Dataset
 **Telco Customer Churn**, publicly available on [Kaggle](https://www.kaggle.com/datasets/blastchar/telco-customer-churn).
 
-The dataset is **not redistributed** in this repository. Download `WA_Fn-UseC_-Telco-Customer-Churn.csv` and place it in `data/`.
-
 During the original exploratory work: **7,043 customers**, **21 columns**, **1,869 churners (26.54%)**. Eleven blank `TotalCharges` values were identified and are handled by median imputation in the training pipeline.
 
 ## Exploratory insights
