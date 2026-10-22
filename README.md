@@ -36,31 +36,61 @@ The following values come from an **earlier 80/20 train/test experiment with thr
 ## Run locally
 
 ```bash
+
+## Run locally
+
+Install the required dependencies:
+
+```bash
 python -m pip install -r requirements.txt
+```
+
+Download the Telco Customer Churn dataset from Kaggle and place the CSV file inside the `data/` directory.
+
+Run the training pipeline:
+
+```bash
 python src/train_model.py --data data/WA_Fn-UseC_-Telco-Customer-Churn.csv
 ```
 
-The script creates:
-- `reports/metrics.json` — selected model, threshold, and held-out test scores
-- `reports/validation_thresholds.csv` — validation metrics across thresholds
-- `reports/confusion_matrix.png`, `reports/roc_curve.png`, `reports/threshold_analysis.png`
-- `models/churn_pipeline.joblib` — trained preprocessing and classification pipeline
+The script generates:
 
-> Run the script from the project root. Actual results depend on the specified split and model settings and may differ from the earlier Colab experiment.
+- `reports/metrics.json` — final test metrics
+- `reports/validation_thresholds.csv` — validation results
+- `reports/confusion_matrix.png` — confusion matrix
+- `reports/roc_curve.png` — ROC curve
+- `reports/threshold_analysis.png` — threshold analysis
+- `models/churn_pipeline.joblib` — trained model
+
+Run these commands from the repository root.
+
 
 ## Repository structure
 
 ```text
+
 customer-churn-prediction/
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
-├── data/                    
-├── notebooks/               
+├── data/
+│   └── WA_Fn-UseC_-Telco-Customer-Churn.csv
+├── notebooks/
+│   └── customer_churn_analysis.ipynb
 ├── src/
 │   └── train_model.py
 └── reports/
-    └── observed_results_from_colab.csv
+    ├── README.md
+    ├── churn_distribution.png
+    ├── churn_by_contract.png
+    ├── churn_rate_by_contract.png
+    ├── churn_by_payment_method.png
+    ├── tenure_by_churn.png
+    ├── monthly_charges_by_churn.png
+    ├── predicted_probabilities_by_churn.png
+    └── roc_curve.png
+
+
 ```
 
 ## Skills demonstrated
